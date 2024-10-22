@@ -84,7 +84,3 @@ tbody tr:nth-child(3n+1) {
 tr:hover {
     background-color: #e0e0e0;
 }
-
-th {
-    border-bottom: 2px solid #333;
-}
