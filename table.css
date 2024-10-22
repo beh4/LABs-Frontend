@@ -52,9 +52,16 @@ caption {
     margin-bottom: 15px;
 }
 
-th, td {
-    padding: 10px;
+th {
     text-align: left;
+    padding: 10px;
+    border: 2px solid rgb(85, 85, 85);
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
     border: 2px solid rgb(85, 85, 85);
 }
 
