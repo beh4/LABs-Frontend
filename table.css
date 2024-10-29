@@ -84,3 +84,37 @@ tbody tr:nth-child(3n+1) {
 tr:hover {
     background-color: #e0e0e0;
 }
+
+form {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid #ffa217;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="number"], select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #ffd478;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #af3f12;
+}
