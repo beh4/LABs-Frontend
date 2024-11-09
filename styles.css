@@ -27,3 +27,17 @@ body {
     height: auto;
     margin: auto;
 }
+
+@media (max-width: 768px) {
+    .actor-img {
+        display: none; 
+        border-radius: 10%;
+    }
+    .actor-info {
+        text-align: center;
+    }
+}
+
+.actor-img {
+    border-radius: 20px;
+}

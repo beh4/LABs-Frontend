@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Список фильмов</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -28,12 +29,124 @@
     </nav>
 
     <div class="container mt-5">
-        <div class="alert alert-warning mt-5" role="alert">
-            Данная страница сейчас находится в разработке. Пожалуйста, вернитесь позже!
+        <div class="row">
+            <div class="col-md-6 actor-info">
+                <h1 class="mt-4">Том Хэнкс</h1>
+                <p><strong>Дата рождения:</strong> 9 июля 1956</p>
+                <p><strong>Возраст:</strong> 68 лет</p>
+                <p><strong>Количество фильмов:</strong> 422</p>
+                <p><strong>Жанры фильмов:</strong> комедия, драма, документальный</p>
+                <p><strong>Награды:</strong> Оскар за "Лучшая мужская роль" в "Филадельфия", "Лучшая мужская роль" в "Форрест Гамп"</p>
+                <p><strong>Интересный факт:</strong> Том коллекционирует печатные машинки.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="images/Tom_H.png" alt="Фотография актёра" class="actor-img">
+            </div>
+        </div>
+        <h2 class="mt-5">Лучшие фильмы</h2>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="images/forrest_gump.png" class="card-img-top" alt="Постер Форрест Гамп">
+                    <div class="card-body">
+                        <h5 class="card-title">Форрест Гамп</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="images/cast_away.png" class="card-img-top" alt="Постер Изгой">
+                    <div class="card-body">
+                        <h5 class="card-title">Изгой</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="images/4.png" class="card-img-top" alt="Постер Спасти рядового Райана">
+                    <div class="card-body">
+                        <h5 class="card-title">Спасти рядового Райана</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="images/300x450 (3).png" class="card-img-top" alt="Постер Зелёная миля">
+                    <div class="card-body">
+                        <h5 class="card-title">Зелёная миля</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="images/300x450 (4).png" class="card-img-top" alt="Постер Поймай меня, если сможешь">
+                    <div class="card-body">
+                        <h5 class="card-title">Поймай меня, если сможешь</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="images/300x450 (5).png" class="card-img-top" alt="Постер Тихий океан">
+                    <div class="card-body">
+                        <h5 class="card-title">Тихий океан</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="images/300x450-6.png" class="card-img-top" alt="Постер Братья по оружию">
+                    <div class="card-body">
+                        <h5 class="card-title">Братья по оружию</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="images/300x450-7.png" class="card-img-top" alt="Постер Эпоха кино">
+                    <div class="card-body">
+                        <h5 class="card-title">Эпоха кино</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="mt-5 text-center">Фильмография</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered text-center mt-3">
+                <thead>
+                    <tr>
+                        <th>Год</th>
+                        <th>Русское название</th>
+                        <th>Оригинальное название</th>
+                        <th>Роль</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2002</td>
+                        <td>Поймай меня, если сможешь</td>
+                        <td>Catch Me If You Can</td>
+                        <td>Главная роль</td>
+                    </tr>
+                    <tr>
+                        <td>1999</td>
+                        <td>Зеленая миля</td>
+                        <td>The Green Mile</td>
+                        <td>Главная роль</td>
+                    </tr>
+                    <tr>
+                        <td>1994</td>
+                        <td>Форрест Гамп</td>
+                        <td>Forrest Gump</td>
+                        <td>Главная роль</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
