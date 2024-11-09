@@ -1,220 +1,29 @@
 body {
-    background-color: rgb(255, 217, 135);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-}
-
-.content-left {
-    background: white;
-    margin: 20px;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-    width: 65%;
-    padding: 20px;
-}
-
-.content-right {
-    background: white;
-    margin: 20px;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content-right img {
-    max-width: 100%;
-    height: auto;
-}
-
-h1 {
-    font-size: 2.5em;
-    color: #6e5431;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2em;
-    color: #34495e;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 1.2em;
-    color: #705d41;
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-li {
-    font-size: 1.2em;
-    color: #641d52;
-    margin: 5px 0;
-}
-
-a {
-    color: #dbb611;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #ec7c20;
-}
-
-.profile-photo {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.header {
-    background: #ffffff;
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.header a {
-    font-size: 1.2em;
-    color: rgb(120, 51, 134);
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-.header a:hover {
-    text-decoration: underline;
-}
-
-.container {
-    background-color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.block {
-    width: 200px;
-    height: 200px;
-    background-color: #c9a277;
-    margin: 0 auto;
-}
-
-.container-2 {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.block-2 {
-    width: 200px;
-    height: 200px;
-    background-color: #222222;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.centered-image {
-    width: 200px;
-    margin: 20px auto;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-}
-
-.container-3 {
-    background-color: #ffffff;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border: 2px solid #ff6600;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.block-3 {
-    width: 200px;
-    height: 200px;
-    background-color: #fd7641e0;
-    margin: 10px;
-}
-
-.container-4 {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.block-4 {
-    width: 600px;
-    height: 500px;
-    background-color: #ffffffe0;
-    border: 5px solid #000000;
-    margin: 0 auto;
     position: relative;
 }
 
-.inner-box1 {
-    width: 140px;          
-    height: 140px;         
-    background-color: rgba(255, 255, 255, 0);
-    border: 3.5px solid #ff0000;
-    position: absolute;    
-    top: 90px;            
-    left: 90px;
-}
-
-.inner-box2 {
-    width: 140px;          
-    height: 140px;         
-    background-color: rgba(255, 255, 255, 0);
-    border: 3.5px solid #1100ff;
-    position: absolute;    
-    top: 180px;            
-    left: 180px;
-}
-
-.inner-box3 {
-    width: 140px;          
-    height: 140px;         
-    background-color: rgba(255, 255, 255, 0);
-    border: 3.5px solid #00b91f;
-    position: absolute;    
-    top: 270px;            
-    left: 270px;
-}
-
-.fixed-cat {
+.sidebar {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
 }
 
-.fixed-cat img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
+.sidebar-title {
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.carousel img {
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+.card-img-top {
+    width: 50%;
+    height: auto;
+    margin: auto;
 }
