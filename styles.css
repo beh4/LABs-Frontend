@@ -318,35 +318,35 @@ p{
 @font-face {
 
     font-family: "InvolveSB"; 
-    src: url("../fonts/Involve-SemiBold.woff") format("woff"); 
+    src: url("LABs-Frontend/fonts/Involve-SemiBold.ttf") format("ttf"); 
     font-style: normal; 
     font-weight: normal; 
   } 
 
 @font-face {
     font-family: "InvolveM"; 
-    src: url("../fonts/Involve-Medium.woff") format("woff"); 
+    src: url("LABs-Frontend/fonts/Involve-Medium.ttf") format("ttf"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 
 @font-face {
     font-family: "InvolveR"; 
-    src: url("../fonts/Involve-Regular.woff") format("woff"); 
+    src: url("LABs-Frontend/fonts/Involve-Regular.ttf") format("ttf"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 
 @font-face {
     font-family: "InvolveB"; 
-    src: url("../fonts/Involve-Bold.ttf") format("woff"); 
+    src: url("LABs-Frontend/fonts/Involve-Bold.ttf") format("ttf"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 
 @font-face {
     font-family: "KhandB"; 
-    src: url("../fonts/Khand-SemiBold.woff") format("woff"); 
+    src: url("LABs-Frontend/fonts/Khand-SemiBold.ttf") format("ttf"); 
     font-style: normal; 
     font-weight: normal; 
 } 
