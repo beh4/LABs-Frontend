@@ -1,52 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторная работа 1</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="header">
-        <a href="index.html">Основная страница</a>
-        <a href="page2.html">Позиционирование элементов</a>
-        <a href="table.html">Таблица</a>
-    </div>
-    <div class="content">
-        <div class="content-left">
-            <h1>Это моя первая HTML страница</h1>
+    <title>ZOV - лучший мессенджер для геймеров</title>
+    <link rel="stylesheet" href="styles.css">
 
-            <h1>О себе</h1>
-            <p>
-                Меня зовут <b>Роман</b>. Я родился в городе <i>Хвалынск</i> и учился в Православной гимназии.
-                В свободное время я увлекаюсь <b>рисованием</b> и <i>программированием</i>. 
-                Из интересных фактов: я люблю <b>огурцы</b>.
-            </p>
-
-            <h2>Какие фильмы мне нравятся</h2>
-            <ul>
-                <li>Властелин колец</li>
-                <li>Мстители</li>
-                <li>Феечки винкс</li>
-            </ul>
-
-            <h2>Какая музыка мне нравится</h2>
-            <ol>
-                <li>Hardcore</li>
-                <li>Softcore</li>
-                <li>Corecore</li>
-            </ol>
-
-            <h2>Как связаться со мной</h2>
-            <p>
-                Вы можете посетить мои социальные сети: 
-                <a href="https://vk.com/divine_appearance" target="_blank">VK</a>.
-            </p>
+    <meta property="og:title" content="ZOV">
+    <meta property="og:description" content="Лучший мессенджер для геймеров">
+  </head>
+  <body>
+        <div class="wrapper parallax">
+            <div class="button-container">
+                <button class="hover-button">BLOG</button>
+                <button class="hover-button">CONTACT US</button>
+                <button class="hover-button">DOWNLOAD</button>
+                <button class="hover-button">SAFETY</button>
+            </div>
+            <div class="parallax-layer head">
+                <img src="images/header2.png">
+            </div>
+            <div class = "text-container">
+                <div class="parallax-layer parallax-text1" >CUSTOMIZE YOUR COMMUNICATION</div>
+                <div class="parallax-layer parallax-text2">FREEDOM IN EVERY MESSAGE!</div>
+            </div>
+            <div class="parallax-layer design">
+                <img src="images/AppDZN.png" style="transform: translateY(52%); box-shadow: 0 30px 30px rgba(33, 193, 170, 0.531);">
+            </div>
+            <div class="parallax-layer parallax-image1">
+                <img src="images/layer1.png">
+            </div>
+            <div class="parallax-layer parallax-image2">
+                <img src="images/iconlayer3.png">
+            </div>
+            <div class="parallax-layer parallax-image2">
+                <img src="images/layer2.png">
+            </div>
+            <div class="parallax-layer parallax-image3">
+                <img src="images/layer3.png">
+            </div>
+            <div class="parallax-layer parallax-image4">
+                <img src="images/iconlayer2.png">
+            </div>
+            <div class="parallax-layer parallax-image4">
+                <img src="images/layer4.png">
+            </div>
+            <div class="parallax-layer parallax-image6">
+                <img src="images/iconlayer1.png">
+            </div>
+            <div class="parallax-layer parallax-image5">
+                <img src="images/layer5.png">
+            </div>
+            <div class="parallax-layer parallax-image6">
+                <img src="images/layer6.png">
+            </div>
+            <div class="parallax-layer parallax-image7">
+                <img src="images/layer7.png">
+            </div>
+            <div class="parallax-layer parallax-image8">
+                <img src="images/fon4.jpg">
+            </div>
         </div>
-        <div class="content-right">
-            <img src="images/cat.jpg" alt="Моя фотография" class="profile-photo">
-        </div>
-    </div>
-
-</body>
+    <main>
+        <section class="intro">
+            <h2>Почему ZOV?</h2>
+            <p>ZOV - это мессенджер, созданный специально для геймеров. Общайся, делись впечатлениями и играй в любимые игры с друзьями.</p>
+        </section>
+        <section class="download">
+            <div class="button-container2">
+                <button class="hover-button2">DOWNLOAD <section style="font-size: 17px;">
+                    for Windows 7+
+                </section></button>
+                <button class="hover-button2" style="background-color: #0f9883;">DOWNLOAD <section style="font-size: 17px;">
+                    for MacOS
+                </section></button>
+            </div>
+        </section>
+        <section class="features">
+            <h2>Особенности</h2>
+            <div class="grid-cont">
+                <div class="item1">Чат с друзьями</div>
+                <div class="item2">Групповые вызовы</div>
+                <div class="item3">Игровые каналы</div>
+                <div class="item4">Кроссплатформенное взаимодействие</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>Подпишитесь на нас</h2>
+        <p>Следите за обновлениями и присоединяйтесь к нашей игре!</p>
+    </footer>
+  </body>
 </html>
