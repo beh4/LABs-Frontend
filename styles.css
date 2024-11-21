@@ -318,21 +318,21 @@ p{
 @font-face {
 
     font-family: "InvolveSB"; 
-    src: url("LABs-Frontend/fonts/Involve-SemiBold.ttf") format("truetype"); 
+    src: url("LABs-Frontend/fonts/Involve-SemiBold.woff") format("woff"); 
     font-style: normal; 
     font-weight: normal; 
   } 
 
 @font-face {
     font-family: "InvolveM"; 
-    src: url("LABs-Frontend/fonts/Involve-Medium.ttf") format("truetype"); 
+    src: url("LABs-Frontend/fonts/Involve-Medium.woff") format("woff"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 
 @font-face {
     font-family: "InvolveR"; 
-    src: url("LABs-Frontend/fonts/Involve-Regular.ttf") format("truetype"); 
+    src: url("LABs-Frontend/fonts/Involve-Regular.woff") format("woff"); 
     font-style: normal; 
     font-weight: normal; 
 } 
@@ -346,7 +346,7 @@ p{
 
 @font-face {
     font-family: "KhandB"; 
-    src: url("LABs-Frontend/fonts/Khand-SemiBold.ttf") format("truetype"); 
+    src: url("LABs-Frontend/fonts/Khand-SemiBold.woff") format("woff"); 
     font-style: normal; 
     font-weight: normal; 
 } 
