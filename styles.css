@@ -48,7 +48,7 @@ img {
     z-index: 10;
     display: flex;
     justify-content: center;
-    gap: 700px;
+    gap: 200px;
 }
 
 .hover-button2 {
