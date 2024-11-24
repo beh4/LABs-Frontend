@@ -1,4 +1,5 @@
 body, html {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -48,7 +49,7 @@ img {
     z-index: 10;
     display: flex;
     justify-content: center;
-    gap: 200px;
+    gap: 100px;
 }
 
 .hover-button2 {
@@ -94,6 +95,7 @@ img {
 .wrapper {
     margin: 0 auto;
     width: 100vw;
+    will-change: transform, z-index;
 }
 
 .parallax {
@@ -107,6 +109,7 @@ img {
 .parallax-layer {
     position: absolute;
     inset: 0;   
+    will-change: transform, z-index;
 }
   
 .parallax-text1 {
@@ -152,11 +155,6 @@ img {
     transform: translateZ(-2px) scale(3);
 }
 
-.parallax-image4 {
-    z-index: 5;
-    transform: translateZ(-3px) scale(4);
-}
-
 .parallax-image5 {
     z-index: 4;
     transform: translateZ(-4px) scale(5);
@@ -167,10 +165,6 @@ img {
     transform: translateZ(-5px) scale(6);
 }
 
-.parallax-image7 {
-    z-index: 2;
-    transform: translateZ(-6px) scale(7);
-}
 .parallax-image8 {
     z-index: 1;
     transform: translateZ(-7px) scale(8);
@@ -224,7 +218,10 @@ footer {
 }
 @media (max-width: 2300px){
     .hover-button{
-        
+        font-size: 35px;
+    }
+    .button-container{
+        gap: 350px;
     }
 }
 @media (max-width: 2000px){
@@ -237,7 +234,10 @@ footer {
 }
 @media (max-width: 1600px) {
     .hover-button{
-        
+        font-size: 25px;
+    }
+    .button-container{
+        gap: 200px;
     }
     .parallax-text1{
         font-size: 20px;
@@ -248,7 +248,10 @@ footer {
 }
 @media (max-width: 1000px) {
     .hover-button{
-        
+        font-size: 20px;
+    }
+    .button-container{
+        gap: 100px;
     }
     .parallax-text1{
         font-size: 15px;
@@ -259,7 +262,11 @@ footer {
 }
 @media (max-width: 700px) {
     .hover-button{
-        
+        font-size: 15px;
+    }
+    .button-container{
+        transform: translateY(10%);
+        gap: 75px;
     }
     .parallax-text1{
         font-size: 10px;
@@ -296,6 +303,55 @@ p{
     grid-area: d;
     font-family: "InvolveM", sans-serif;
 }
+
+.marquee {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    background: linear-gradient(to top, #39C259, #0f9838);
+}
+span{
+    font-family: "InvolveB";
+    font-weight: bold;
+    font-size: 60px;
+    color: #FFFFFF;
+}
+.marquee-content {
+    gap: 100px;
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    animation: marquee 40s linear infinite;
+}
+
+.item {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.item img {
+    width: 50px; /* задайте нужный размер */
+    height: auto;
+    margin-right: 50px; /* отступ между картинкой и текстом */
+}
+
+/* Анимация бегущей строки */
+@keyframes marquee {
+    0% {
+        transform: translateX(-20%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
+}
 .grid-cont{
     display: grid;
     grid-template-areas: 
@@ -315,6 +371,7 @@ p{
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 @font-face {
 
     font-family: "InvolveSB"; 
@@ -339,7 +396,7 @@ p{
 
 @font-face {
     font-family: "InvolveB"; 
-    src: url("/LABs-Frontend/fonts/Involve-Bold.ttf") format("truetype"); 
+    src: url("/LABs-Frontend/fonts/Involve-Bold.woff") format("woff"); 
     font-style: normal; 
     font-weight: normal; 
 } 
