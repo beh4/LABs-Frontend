@@ -179,7 +179,7 @@ main {
     position: relative;
     z-index: 10;
     background-color: #FFFFFF;
-    background-image: url("/WebTech/images/main2.png");
+    background-image: url("/LABs-Frontend/images/main2.png");
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center;
