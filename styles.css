@@ -19,6 +19,13 @@ body, html {
     padding-right: 24.5%;
     max-width: 100%;
 }
+.blur{
+    z-index: 7;
+    transform: translateZ(0);
+    padding-left: 24.5%;
+    padding-right: 24.5%;
+    max-width: 100%;
+}
 .text-container{
     position: relative;
     max-width: 100%;
