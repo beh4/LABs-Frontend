@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     height: 100%;
     overflow-x: hidden;
-    background-color: #239862;
+    background-color: #ffffff;
 }
 .link{
     color: #c7c7c7;
@@ -100,6 +100,7 @@ img {
 .wrapper {
     margin: 0 auto;
     width: 100vw;
+    height: auto;
     will-change: transform, z-index;
 }
 
@@ -217,7 +218,7 @@ main {
 footer {
     background-color: #506756;
     color: #c7c7c7;
-    height: 20%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
