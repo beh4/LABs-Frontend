@@ -187,7 +187,7 @@ main {
     position: relative;
     z-index: 10;
     background-color: #FFFFFF;
-    background-image: url("/LABs-Frontend/images/main2.png");
+    background-image: url("images/main2.png");
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center;
@@ -202,7 +202,6 @@ main {
 .intro, .features {
     padding: 10px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .download{
@@ -210,10 +209,8 @@ main {
 }
 
 .features {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.226);
 }
 
 .grid {
@@ -332,7 +329,7 @@ p{
     margin-block-start: 0.50em;
     margin-block-end: 0.50em;
     font-family: "InvolveR", sans-serif;
-    font-size: 25px;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
@@ -392,7 +389,16 @@ span{
     height: auto;
     margin-right: 50px;
 }
-
+.gridtext1{
+    padding-top: 4px;
+    font-family: "InvolveM", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+.gridtext2{
+    font-family: "InvolveR", sans-serif;
+    font-size: 18px;
+}
 @keyframes marquee {
     0% {
         transform: translateX(-20%);
@@ -407,19 +413,19 @@ span{
 .grid-cont{
     display: grid;
     grid-template-areas: 
-    'a a b b'
-    'c c b b'
-    'c c b b'
-    'c c d d';
+    'a a b b c c d d'
+    'a a b b c c d d'
+    ;
     width: 100%;
     grid-gap: 20px;
     background-color: #FFFFFF;
     padding: 10px;
     margin-top: 20px;
+    justify-content: center;
 }
 .grid-cont >div{
-    background-color: #e0e0e0;
-    padding: 20px;
+    background-color: #efefef;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
