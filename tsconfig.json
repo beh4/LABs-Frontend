@@ -10,9 +10,9 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "module": "ESNext",
-    "target": "es6",
+    "target": "ES6",
     "lib": [
-      "es6",
+      "ES6",
       "dom"
     ]
   },
