@@ -204,8 +204,8 @@ class VehicleStorage<T extends IVehicle> implements IVehicleStorage<T> {
     }
 }
 
-const owner = new Owner("Иванов", "Иван", "Иванович", new Date(1980, 1, 1), DocType.PASSPORT, "1234", "567890");
-const car = new Car("Toyota", "Corolla", 2015, "12345678901234567", "A123BC", owner, BodyType.SEDAN, CarClass.COMFORT);
+const owner = new Owner("Романов", "Роман", "Романович", new Date(1990, 1, 2), DocType.PASSPORT, "1234", "567890");
+const car = new Car("BMW", "M8", 2015, "12345678901234567", "A123BC", owner, BodyType.SEDAN, CarClass.COMFORT);
 const motorbike = new Motorbike("Yamaha", "YZF-R1", 2020, "98765432109876543", "M123XY", owner, "Стальная", true);
 
 const vehicleStorage = new VehicleStorage<IVehicle>();
