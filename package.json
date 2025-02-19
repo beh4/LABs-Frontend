@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "@types/node": "^22.13.1"
+  },
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "labs",
+  "main": "lab1.js",
+  "dependencies": {
+    "undici-types": "^6.20.0"
+  },
+  "scripts": {
+    "test": "/"
+  },
+  "author": "romanMans",
+  "license": "ISC"
+}
