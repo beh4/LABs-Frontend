@@ -1,3 +1,22 @@
+function freezeClass<T extends new (...args: any[]) => any>(constructor: T) {
+    Object.freeze(constructor);
+    Object.freeze(constructor.prototype);
+}
+
+function uppercaseMethod(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+    const originalMethod = descriptor.value;
+
+    descriptor.value = function (...args: any[]) {
+        const result = originalMethod.apply(this, args);
+        if (typeof result === 'string') {
+            return result.toUpperCase();
+        }
+        return result;
+    };
+
+    return descriptor;
+}
+
 enum DocType {
     PASSPORT = "Паспорт",
     DRIVER_LICENSE = "Водительское удостоверение",
@@ -28,11 +47,6 @@ interface IVehicle {
 interface ICar extends IVehicle {
     bodyType: BodyType;
     carClass: CarClass;
-}
-
-interface IMotorbike extends IVehicle {
-    frameType: string;
-    isSport: boolean;
 }
 
 enum BodyType {
@@ -81,8 +95,9 @@ class Owner implements IOwner {
     get documentNumber(): string { return this._documentNumber; }
     set documentNumber(value: string) { this._documentNumber = value; }
 
+    @uppercaseMethod
     printOwnerInfo(): string {
-        return `Фамилия: ${this._surname}\nИмя: ${this._name}\n Отчество: ${this._patronymic}\n Дата рождения: ${this._birthDate.toLocaleDateString()}\n Тип документа: ${this._documentType}\n Серия документа: ${this._documentSeries}\n Номер документа: ${this._documentNumber}`;
+        return `Фамилия: ${this._surname}\nИмя: ${this._name}\nОтчество: ${this._patronymic}\nДата рождения: ${this._birthDate.toLocaleDateString()}\nТип документа: ${this._documentType}\nСерия документа: ${this._documentSeries}\nНомер документа: ${this._documentNumber}`;
     }
 }
 
@@ -115,10 +130,11 @@ class Vehicle implements IVehicle {
     set owner(value: IOwner) { this._owner = value; }
 
     printVehicleInfo(): string {
-        return `Марка: ${this._brand}\n Модель: ${this._model}\n Год выпуска: ${this._year}\nVIN: ${this._vin}\n Регистрационный номер: ${this._registrationNumber}`;
+        return `Марка: ${this._brand}\nМодель: ${this._model}\nГод выпуска: ${this._year}\nVIN: ${this._vin}\nРегистрационный номер: ${this._registrationNumber}`;
     }
 }
 
+@freezeClass
 class Car extends Vehicle implements ICar {
     constructor(
         brand: string,
@@ -140,80 +156,22 @@ class Car extends Vehicle implements ICar {
     set carClass(value: CarClass) { this._carClass = value; }
 
     printVehicleInfo(): string {
-        super.printVehicleInfo();
-        return super.printVehicleInfo() + `\n Тип кузова: ${this._bodyType}\n Класс автомобиля: ${this._carClass}`;
-    }
-}
-
-class Motorbike extends Vehicle implements IMotorbike {
-    constructor(
-        brand: string,
-        model: string,
-        year: number,
-        vin: string,
-        registrationNumber: string,
-        owner: IOwner,
-        private _frameType: string,
-        private _isSport: boolean
-    ) {
-        super(brand, model, year, vin, registrationNumber, owner);
-    }
-
-    get frameType(): string { return this._frameType; }
-    set frameType(value: string) { this._frameType = value; }
-
-    get isSport(): boolean { return this._isSport; }
-    set isSport(value: boolean) { this._isSport = value; }
-
-    printVehicleInfo(): string {
-        super.printVehicleInfo();
-        return super.printVehicleInfo() + `\n Тип рамы: ${this._frameType}\n Для спорта: ${this._isSport}`;
-    }
-}
-
-interface IVehicleStorage<T extends IVehicle> {
-    created: Date;
-    data: T[];
-    getAll(): T[];
-    save(data: T): void;
-    remove(index: number): void;
-}
-
-class VehicleStorage<T extends IVehicle> implements IVehicleStorage<T> {
-    private _created: Date;
-    private _data: T[];
-
-    constructor() {
-        this._created = new Date();
-        this._data = [];
-    }
-
-    get created(): Date { return this._created; }
-    get data(): T[] { return this._data; }
-
-    getAll(): T[] {
-        return this._data;
-    }
-
-    save(data: T): void {
-        this._data.push(data);
-    }
-
-    remove(index: number): void {
-        this._data.splice(index, 1);
+        return super.printVehicleInfo() + `\nТип кузова: ${this._bodyType}\nКласс автомобиля: ${this._carClass}`;
     }
 }
 
 const owner = new Owner("Романов", "Роман", "Романович", new Date(1990, 1, 2), DocType.PASSPORT, "1234", "567890");
 const car = new Car("BMW", "M8", 2015, "12345678901234567", "A123BC", owner, BodyType.SEDAN, CarClass.COMFORT);
-const motorbike = new Motorbike("Yamaha", "YZF-R1", 2020, "98765432109876543", "M123XY", owner, "Стальная", true);
-
-const vehicleStorage = new VehicleStorage<IVehicle>();
-vehicleStorage.save(car);
-vehicleStorage.save(motorbike);
 
 console.log(owner.printOwnerInfo());
 console.log(car.printVehicleInfo());
-console.log(motorbike.printVehicleInfo());
 
-vehicleStorage.getAll().forEach(vehicle => console.log(vehicle.printVehicleInfo()));
+try {
+    // @ts-ignore
+    Car.prototype.newProperty = "Новое свойство";
+    console.log("Новое свойство добавлено в прототип.");
+} catch (e) {
+    if (e instanceof Error) {
+        console.log("Ошибка: невозможно добавить свойство в замороженный прототип.");
+    }
+}
