@@ -1,0 +1,14 @@
+{
+    "dishes": [
+        {
+            "name": "Пельмени",
+            "ingredients": ["Мука", "Яйца", "Мясо", "Лук"],
+            "vegetarian": false
+        },
+        {
+            "name": "Шарлотка",
+            "ingredients": ["Яблоки", "Мука", "Сахар", "Яйца"],
+            "vegetarian": true
+        }
+    ]
+}
