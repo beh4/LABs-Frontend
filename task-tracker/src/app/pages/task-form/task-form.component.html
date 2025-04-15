@@ -1,0 +1,55 @@
+<div>
+    <h2>Add New Task</h2>
+    <form (ngSubmit)="onSubmit()" class="task-form">
+      <div>
+        <div class="form-field">
+          <label for="title">Title*</label>
+          <input type="text" id="title" [(ngModel)]="newTask.title" name="title" required>
+        </div>
+        
+        <div class="form-field">
+          <label for="creator">Creator*</label>
+          <input type="text" id="creator" [(ngModel)]="newTask.creator" name="creator" required>
+        </div>
+        
+        <div class="form-field">
+          <label for="type">Type*</label>
+          <select id="type" [(ngModel)]="newTask.type" name="type" required>
+            <option *ngFor="let type of taskTypes" [value]="type">{{ type }}</option>
+          </select>
+        </div>
+        
+        <div class="form-field">
+          <label for="status">Status*</label>
+          <select id="status" [(ngModel)]="newTask.status" name="status" required>
+            <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+          </select>
+        </div>
+        
+        <div class="form-field">
+          <label for="priority">Priority</label>
+          <select id="priority" [(ngModel)]="newTask.priority" name="priority">
+            <option *ngFor="let priority of priorities" [value]="priority">
+              {{ priority || 'Not specified' }}
+            </option>
+          </select>
+        </div>
+        
+        <div class="form-field">
+          <label for="assignee">Assignee</label>
+          <input type="text" id="assignee" [(ngModel)]="newTask.assignee" name="assignee">
+        </div>
+      </div>
+      
+      <div class="form-field">
+        <label for="description">Description</label>
+        <textarea id="description" [(ngModel)]="newTask.description" name="description" rows="3"></textarea>
+      </div>
+      
+      <div>
+        <button type="submit" [disabled]="!isFormValid()">
+          Add Task
+        </button>
+      </div>
+    </form>
+  </div>

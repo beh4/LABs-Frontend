@@ -1,0 +1,47 @@
+<form #itemForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+      <label for="name">Название</label>
+      <input type="text" id="name" name="name" [(ngModel)]="model.name" 
+             #name="ngModel" required minlength="3" maxlength="50" class="form-control">
+      
+      <div *ngIf="submitted && name.invalid" class="error-message">
+        <div *ngIf="name.errors?.['required']">Поле обязательно для заполнения</div>
+        <div *ngIf="name.errors?.['minlength']">
+          Мин длина: {{name.errors?.['minlength'].requiredLength}} символов
+        </div>
+        <div *ngIf="name.errors?.['maxlength']">
+          Макс длина: {{name.errors?.['maxlength'].requiredLength}} символов
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="description">Описание</label>
+      <textarea id="description" name="description" [(ngModel)]="model.description"
+                #description="ngModel" required minlength="10" maxlength="200" class="form-control"></textarea>
+      
+      <div *ngIf="submitted && description.invalid" class="error-message">
+        <div *ngIf="description.errors?.['required']">Поле обязательно для заполнения!</div>
+        <div *ngIf="description.errors?.['minlength']">
+          Мин длина: {{description.errors?.['minlength'].requiredLength}} символов
+        </div>
+        <div *ngIf="description.errors?.['maxlength']">
+          Макс длина: {{description.errors?.['maxlength'].requiredLength}} символов
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="price">Цена</label>
+      <input type="number" id="price" name="price" [(ngModel)]="model.price"
+             #price="ngModel" required min="0.01" max="10000" step="0.01" class="form-control">
+      
+      <div *ngIf="submitted && price.invalid" class="error-message">
+        <div *ngIf="price.errors?.['required']">Поле обязательно для заполнения!</div>
+        <div *ngIf="price.errors?.['min']">Мин значение: {{price.errors?.['min'].min}}</div>
+        <div *ngIf="price.errors?.['max']">Макс значение: {{price.errors?.['max'].max}}</div>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+  </form>

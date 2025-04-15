@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(234, 245, 245);
+    color: rgb(35, 32, 32);
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    margin: 20px 15px;
+}
+
+button{
+    margin: 20px 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 10px;
+    background-color: rgb(164, 216, 167);
+}
+
+button:hover{
+    background-color: rgb(135, 206, 159);
+}
+
+h2{
+    color: rgb(43, 177, 94);
+}
+
+h1{
+    color: rgb(0, 130, 80);
+}
+
+input, textarea{
+    border: none;
+    margin: 5px 5px;
+}

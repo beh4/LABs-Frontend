@@ -1,0 +1,60 @@
+div.status, div.task-item{
+    display: table;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+div.status{
+    background-color: rgb(210, 248, 213);
+}
+
+div.task-item{
+    margin-top: 10px;
+    text-align: left;
+    background-color: rgba(127, 255, 127, 0.103);
+    border-radius: 10px;
+    border: 6px solid rgba(127, 255, 133, 0.252);
+}
+
+select{
+    border-radius: 3px;
+}
+
+option{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+label.status-filter{
+    margin-right: 10px;
+}
+
+div.no-tasks{
+    margin-top: 10px;
+}
+
+button.delete-task{
+    margin: 5px;
+}
+
+div.task-item-raw{
+    margin: 10px;
+}
+
+span.task-data{
+    background-color: rgba(134, 233, 125, 0.23);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px;
+}
+
+div.task-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+div.description{
+    text-wrap: wrap ;
+}

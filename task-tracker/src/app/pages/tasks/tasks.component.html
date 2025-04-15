@@ -1,0 +1,75 @@
+<div>
+    <h1>Task Tracker</h1>
+  
+    <div>
+      <div class="status">
+        <label for="statusFilter" class="status-filter">Filter status:</label>
+        <select id="statusFilter" [(ngModel)]="statusFilter" (change)="loadTasks()">
+          <option value="all">All</option>
+          <option value="open">Open</option>
+          <option value="in-progress">In Progress</option>
+          <option value="done">Done</option>
+          <option value="closed">Closed</option>
+        </select>
+      </div>
+      <button (click)="toggleForm()">
+        {{ showForm ? 'Cancel' : 'Add New Task' }}
+      </button>
+    </div>
+  
+    <app-task-form *ngIf="showForm" (taskAdded)="onTaskAdded()"></app-task-form>
+  
+    <div *ngIf="filteredTasks.length === 0" class="no-tasks">
+      No tasks found. Create your first task!
+    </div>
+
+    <div class="task-container">
+      <div *ngFor="let task of filteredTasks" class="task-item">
+        <div>
+          <div class="task-item-raw">
+            <h2>{{ task.title }}</h2>
+            <div>
+              <span class="task-data">
+                {{ task.status }}
+              </span>
+              <span class="task-data">
+                {{ task.type }}
+              </span>
+              <span class="task-data">
+                {{ task.priority }}
+              </span>
+            </div>
+          </div>
+          <div class="task-item-raw">
+            <span class="task-data">
+              #{{ task.id }}
+            </span>
+            <span class="task-data">
+              {{ task.createdAt | date:'short' }}
+            </span>
+          </div>
+        </div>
+    
+        <div *ngIf="task.description" class="task-item-raw description">
+          {{ task.description }}
+        </div>
+
+        <div>
+          <div class="task-item-raw">Creator: {{ task.creator }}</div>
+          <div *ngIf="task.assignee" class="task-item-raw">Assignee: {{ task.assignee }}</div>
+        </div>
+        <div class="task-item-raw">
+          <span>Status: </span>
+          <select [(ngModel)]="task.status" (change)="updateStatus(task, task.status)">
+            <option value="open">Open</option>
+            <option value="in-progress">In Progress</option>
+            <option value="done">Done</option>
+            <option value="closed">Closed</option>
+          </select>
+        </div>
+        <button (click)="deleteTask(task.id)" class="delete-task">
+          Delete
+        </button>
+      </div>
+  </div>
+</div>

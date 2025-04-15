@@ -1,0 +1,41 @@
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+      <label for="name">Название</label>
+      <input type="text" id="name" formControlName="name" class="form-control">
+      <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="error-message">
+        <div *ngIf="name?.errors?.['required']">Поле обязательно для заполнения</div>
+        <div *ngIf="name?.errors?.['minlength']">
+          Мин длина: {{name?.errors?.['minlength'].requiredLength}} символов
+        </div>
+        <div *ngIf="name?.errors?.['maxlength']">
+          Макс длина: {{name?.errors?.['maxlength'].requiredLength}} символов
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="description">Описание</label>
+      <textarea id="description" formControlName="description" class="form-control"></textarea>
+      <div *ngIf="description?.invalid && (description?.dirty || description?.touched)" class="error-message">
+        <div *ngIf="description?.errors?.['required']">Поле обязательно для заполнения</div>
+        <div *ngIf="description?.errors?.['minlength']">
+          Мин длина: {{description?.errors?.['minlength'].requiredLength}} символов
+        </div>
+        <div *ngIf="description?.errors?.['maxlength']">
+          Макс длина: {{description?.errors?.['maxlength'].requiredLength}} символов
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="price">Цена</label>
+      <input type="number" id="price" formControlName="price" class="form-control" step="0.01">
+      <div *ngIf="price?.invalid && (price?.dirty || price?.touched)" class="error-message">
+        <div *ngIf="price?.errors?.['required']">Поле обязательно для заполнения</div>
+        <div *ngIf="price?.errors?.['min']">Мин значение: {{price?.errors?.['min'].min}}</div>
+        <div *ngIf="price?.errors?.['max']">Макс значение: {{price?.errors?.['max'].max}}</div>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary" [disabled]="!itemForm.valid">Сохранить</button>
+  </form>

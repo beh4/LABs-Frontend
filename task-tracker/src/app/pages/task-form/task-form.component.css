@@ -1,0 +1,12 @@
+form.task-form{
+    text-align: left;
+    margin-left: 40%;
+}
+
+div.form-field{
+    margin: 10px;
+}
+
+label{
+    margin: 5px;
+}
